@@ -1,18 +1,17 @@
 import styles from './UserList.module.css'
 
-const UserList = (props) => {
+const UsersList = (props) => {
 
-  const renderUserList = () => {
+  const renderUsersList = () => {
     return props.userList.map((item) => {
       return (
-        <div>
+        <div key={Math.random().toString()}>
           {item.name} ({item.age} years old)
         </div>
       );
     });
   };
-
-  return <section className={styles.userList}>{renderUserList()}</section>;
+  return <section className={styles.userList}>{renderUsersList()}</section>;
 };
 
-export default UserList;
+export default UsersList;
