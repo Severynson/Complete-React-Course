@@ -1,0 +1,16 @@
+.userList {
+    margin-top: 18px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    background-color: #ced4da;
+  
+  }
+  
+  .userList div {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 5px 0px;
+    border-radius: 10px;
+  }
