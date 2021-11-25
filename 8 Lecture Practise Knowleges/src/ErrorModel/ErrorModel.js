@@ -15,7 +15,7 @@ const ErrorModel = (props) => {
             <p>{props.message}</p>
           </div>
           <div className={styles["error-button-div"]}>
-            <button type="submit" onClick={() => (counter = false)}>
+            <button type="submit" onClick={props.cancel}>
               Okay
             </button>
           </div>
