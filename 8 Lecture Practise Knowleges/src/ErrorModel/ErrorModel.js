@@ -1,16 +1,28 @@
-import styles from "./ErrorModel.module.css"
+import styles from "./ErrorModel.module.css";
 
 var counter = true;
 
-const ErrorModel = () => {
-    if (counter === true) {
-         return <div className={styles.error} styles={counter === true ? ''}>
-        <div className={styles["error-heading"]}><p>An error occured!</p></div>
-        <div className={styles["error-message"]}><p>Something went wrong!</p></div>
-        <div className={styles["error-button-div"]}><button type="submit" onClick={() => counter = false}>Okay</button></div>
-      </div> 
-    }
-       
-}
+const ErrorModel = (props) => {
+  if (counter === true) {
+    return (
+      <div>
+        <div className={styles.backdrop} />
+        <div className={styles.error}>
+          <div className={styles["error-heading"]}>
+            <p>{props.title}</p>
+          </div>
+          <div className={styles["error-message"]}>
+            <p>{props.message}</p>
+          </div>
+          <div className={styles["error-button-div"]}>
+            <button type="submit" onClick={() => (counter = false)}>
+              Okay
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+};
 
 export default ErrorModel;

@@ -23,9 +23,7 @@ function App() {
   return (
     <div className={styles.container}>
       <AddUser userList={userList} submitHandlerFunction={submitHandlerFunction} />
-      <UsersList userList={reloadList} />
-      <ErrorModel />
-      
+      <UsersList userList={reloadList} />  
     </div>
   );
 }

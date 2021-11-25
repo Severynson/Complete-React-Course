@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./AddUser.module.css";
+import ErrorModel from "../ErrorModel/ErrorModel";
 
 const AddUser = (props) => {
     const [name, setName] = useState('');
@@ -28,6 +29,8 @@ const AddUser = (props) => {
     }
 
   return (
+    <div>
+    <ErrorModel title="An error occured!" message="Something went wrong!"/>
     <section>
         <form className={styles.addUser} onSubmit={newUserHandler}>
       <label>Username</label>
@@ -37,6 +40,8 @@ const AddUser = (props) => {
       <button type="submit">Add User</button>
     </form>
     </section>
+    
+    </div>
   );
 };
 
