@@ -42,20 +42,17 @@ const emailInputIsInvalid = !enteredEmailIsValid && enteredEmailIsTouched;
     event.preventDefault();
 
     setEnteredNameIsTouched(true);
+    setEnteredEmailIsTouched(true);
 
-    if (!enteredNameIsValid) {
+    if (!enteredNameIsValid || !enteredEmailIsValid) {
       return;
     }
 
-    console.log(enteredName);
-
     setEnteredName("");
+    setEnteredEmail("");
     setEnteredNameIsTouched(false);
+    setEnteredEmailIsTouched(false);
   };
-
-  // const nameInputClasses = nameInputIsInvalid
-  //   ? "form-control invalid"
-  //   : "form-control";
 
   return (
     <form onSubmit={formSubmitChangeHandler}>
