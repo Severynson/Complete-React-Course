@@ -1,6 +1,19 @@
 import classes from './Auth.module.css';
+import { authActions } from "../store/index"
+import { useSelector, useDispatch } from 'react-redux';
 
 const Auth = () => {
+  // const dispatch = useDispatch();
+  // const isAuthenticated = useSelector((state) => state.isAuthenticated);
+
+  // const loginHandler = () => {
+  //   dispatch(authActions.login());
+  // };
+
+  // const logoutHandler = () => {
+  //   dispatch(authActions.logout());
+  // };
+
   return (
     <main className={classes.auth}>
       <section>
