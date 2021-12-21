@@ -3,6 +3,12 @@ import { authActions } from "../store/index"
 import { useSelector, useDispatch } from 'react-redux';
 
 const Auth = () => {
+  const dispatch = useDispatch();
+
+  const loginHandler = (e) => {
+    e.preventDefault();
+    dispatch(authActions.login());
+  };
   // const dispatch = useDispatch();
   // const isAuthenticated = useSelector((state) => state.isAuthenticated);
 
@@ -17,7 +23,7 @@ const Auth = () => {
   return (
     <main className={classes.auth}>
       <section>
-        <form>
+        <form onSubmit={loginHandler}>
           <div className={classes.control}>
             <label htmlFor='email'>Email</label>
             <input type='email' id='email' />
