@@ -9,7 +9,6 @@ const store = configureStore({
   reducer: { counter: counterReducer, auth: authSlice.reducer },
 });
 
-
 export const authActions = authSlice.actions;
 
 export default store;
