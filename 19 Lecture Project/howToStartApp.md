@@ -1,1 +1,0 @@
-to start just install by youre node package manager (npm) next libriaries: redux, react-redux, @reduxjs/toolkit
