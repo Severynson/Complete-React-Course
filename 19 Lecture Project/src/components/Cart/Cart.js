@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import { cartActions } from "../../store/cart-slice";
 import Card from "../UI/Card";
 import classes from "./Cart.module.css";
 import CartItem from "./CartItem";
@@ -13,6 +12,7 @@ const Cart = (props) => {
         {cartItems.map((item) => (
           <CartItem
             item={{
+              id: item.id,
               title: item.name,
               quantity: item.quantity,
               total: item.totalPrice,
