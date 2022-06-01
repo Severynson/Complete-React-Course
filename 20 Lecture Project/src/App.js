@@ -4,6 +4,13 @@ import Welcome from "./pages/Welcome";
 import MainHeader from "./components/MainHeader";
 import ProductDetail from "./pages/ProductDetail";
 
+
+/////////////////////////////////////////////////////////////////////////
+///////// Author is using an old version of react router so I didn't pass
+///////// this section of course, but watched tutorials on youtube about
+///////// React-router-dom v6...
+/////////////////////////////////////////////////////////////////////////
+
 function App() {
   return (
     <div>
